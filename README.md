@@ -4,7 +4,7 @@ I used the code format so you can easily copy and paste it into your `README.md`
 
 # TechHub Website  
 
-![TechHub Website Screenshot](screenshot.png)  
+![image](https://github.com/user-attachments/assets/36842674-8e64-44d5-80e9-31cf28140a86)
 
 This is a **TechHub Website** built using HTML, CSS, and JavaScript. It showcases different fields like **Web Development, Data Science, AI, and Cybersecurity** (currently non-clickable).  
 
@@ -23,7 +23,6 @@ This is a **TechHub Website** built using HTML, CSS, and JavaScript. It showcase
 ## Contributing  
 Feel free to fork this repository and contribute! 🚀  
 
-![image](https://github.com/user-attachments/assets/36842674-8e64-44d5-80e9-31cf28140a86)
 
 ![image](https://github.com/user-attachments/assets/cc8cab17-80d7-48ad-ab87-d064e8c6ebaf)
 
