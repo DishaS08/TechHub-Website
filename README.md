@@ -6,7 +6,7 @@ I used the code format so you can easily copy and paste it into your `README.md`
 
 ![image](https://github.com/user-attachments/assets/36842674-8e64-44d5-80e9-31cf28140a86)
 
-This is a **TechHub Website** built using HTML, CSS, and JavaScript. It showcases different fields like **Web Development, Data Science, AI, and Cybersecurity** (currently non-clickable).  
+This is a TechHub Website built using HTML, CSS, and JavaScript. It showcases different fields like Web Development, Data Science, AI, and Cybersecurity (currently non-clickable).  
 
 ## Features  
 ✅ Modern UI Design  
