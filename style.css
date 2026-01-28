@@ -24,7 +24,24 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #121212;
-    max-height: 150px; /* Limiting the height */
+    max-height: 150px;
+    /* Limiting the height */
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+        margin-top: 3px;
+        padding: 3px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
 }
 
 .logo h1 {
@@ -57,43 +74,90 @@ ul {
 
 /* Remove the default purple color of the link (visited state) */
 a:visited {
-    color: inherit; /* Inherits the color of the surrounding text */
+    color: inherit;
+    /* Inherits the color of the surrounding text */
 }
 
 /* Ensure the link color remains consistent */
 a {
-    color: #fff; /* You can set this to any color, for example, white */
-    text-decoration: none; /* Removes underlines from links */
+    color: #fff;
+    /* You can set this to any color, for example, white */
+    text-decoration: none;
+    /* Removes underlines from links */
 }
 
 /* Optional: Hover effect to make it more engaging */
 a:hover {
-    color: #f39c12; /* Your orange color */
+    color: #f39c12;
+    /* Your orange color */
 }
 
 #reload-logo h1 {
-    color: #fff; /* Set it to white or any color you'd like */
+    color: #fff;
+    /* Set it to white or any color you'd like */
     margin: 0;
 }
 
 #reload-logo a:visited {
-    color: inherit; /* Inherit color when clicked */
+    color: inherit;
+    /* Inherit color when clicked */
 }
 
 
 
 /* Navigation */
 nav {
-    background-color: #333; /* Dark background for nav */
-    padding: 10px 0; /* Padding for spacing */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #333;
+    /* Dark background for nav */
+    padding: 10px 0;
+    /* Padding for spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
     margin-bottom: 10px;
+    position: relative;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Style for active navigation link */
 nav a.active {
-    color: #f39c12;  /* Same as your button color */
-    font-weight: bold; /* Optional: make it bold to stand out */
+    color: #f39c12;
+    /* Same as your button color */
+    font-weight: bold;
+    /* Optional: make it bold to stand out */
 }
 
 
@@ -106,7 +170,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 25px; /* Increased spacing for a cleaner look */
+    margin: 0 25px;
+    /* Increased spacing for a cleaner look */
 }
 
 nav ul li a {
@@ -114,7 +179,8 @@ nav ul li a {
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
-    position: relative; /* For underline animation */
+    position: relative;
+    /* For underline animation */
     padding: 5px 0;
 }
 
@@ -137,48 +203,119 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #f39c12; /* Keep hover effect orange */
+    color: #f39c12;
+    /* Keep hover effect orange */
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Navigation */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     nav ul {
-        justify-content: space-around; /* Distribute items evenly */
-        flex-wrap: nowrap; /* Prevent wrapping */
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        left: 0;
     }
 
     nav ul li {
-        margin: 0 15px; /* Adjust margin for mobile */
+        margin: 15px 0;
     }
 
     nav ul li a {
-        font-size: 1.1rem; /* Adjust font size for mobile */
+        font-size: 1.3rem;
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        top: 60px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
     }
 }
 
 
 /* for home */
 #home {
-    background-color: #121212; /* Darker background */
+    background-color: #121212;
+    /* Darker background */
     padding: 40px 20px;
-    text-align: center; /* Center align headers */
+    text-align: center;
+    /* Center align headers */
 }
 
 #home h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    text-align: center; /* Ensures h2 is centered */
+    text-align: center;
+    /* Ensures h2 is centered */
 }
 
 #home p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #fff; /* White text for contrast */
-    text-align: justify; /* Justify the text for body content */
-    max-width: 800px; /* Optional: limits the width for a more polished look */
-    margin-left: auto; /* Centering the paragraphs */
-    margin-right: auto; /* Centering the paragraphs */
+    color: #fff;
+    /* White text for contrast */
+    text-align: justify;
+    /* Justify the text for body content */
+    max-width: 800px;
+    /* Optional: limits the width for a more polished look */
+    margin-left: auto;
+    /* Centering the paragraphs */
+    margin-right: auto;
+    /* Centering the paragraphs */
+}
+
+/* Responsive Home Section */
+@media (max-width: 768px) {
+    #home {
+        padding: 30px 15px;
+    }
+
+    #home h2 {
+        font-size: 2.2rem;
+    }
+
+    #home p {
+        font-size: 1.1rem;
+        text-align: left;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        padding: 20px 10px;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #home p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* Button Styling */
@@ -198,22 +335,39 @@ nav ul li a:hover {
 
 .cta-button:hover {
     background-color: #e67e22;
-    transform: scale(1.1); /* Slightly enlarge the button */
+    transform: scale(1.1);
+    /* Slightly enlarge the button */
 }
 
 .cta-button:active {
-    transform: scale(1.05); /* Slightly shrink the button on click */
+    transform: scale(1.05);
+    /* Slightly shrink the button on click */
+}
+
+/* Responsive CTA Button */
+@media (max-width: 480px) {
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
 
 /* Wrapper for Courses */
 #courses .course-container {
-    background-color: #1E2A38; /* Slightly darker for better contrast */
-    padding: 50px 20px; /* Increased padding for better visibility */
+    background-color: #1E2A38;
+    /* Slightly darker for better contrast */
+    padding: 50px 20px;
+    /* Increased padding for better visibility */
     border-radius: 20px;
-    margin-top: 0; /* Removed redundant margin-top */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-    border: 2px solid #ffffff30; /* Subtle border for visibility */
+    margin-top: 0;
+    /* Removed redundant margin-top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+    border: 2px solid #ffffff30;
+    /* Subtle border for visibility */
 }
 
 
@@ -251,7 +405,8 @@ nav ul li a:hover {
 .course-item:hover {
     transform: scale(1.08);
     cursor: pointer;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Adds a stronger shadow */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    /* Adds a stronger shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -281,7 +436,8 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between faculty boxes */
+    gap: 20px;
+    /* Space between faculty boxes */
     padding: 20px;
 }
 
@@ -291,7 +447,8 @@ nav ul li a:hover {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 30%; /* Ensures 3 in the first row, 2 in the second */
+    width: 30%;
+    /* Ensures 3 in the first row, 2 in the second */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
@@ -313,13 +470,14 @@ nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .faculty-item {
-        width: 45%; /* 2 per row on smaller screens */
+        width: 45%;
+        /* 2 per row on smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     .faculty-item {
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -344,7 +502,7 @@ nav ul li a:hover {
     width: 90%;
     text-align: center;
     height: auto;
-    
+
 }
 
 #contact h2 {
@@ -353,7 +511,8 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#contact p, #contact address {
+#contact p,
+#contact address {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -400,7 +559,8 @@ nav ul li a:hover {
         font-size: 2rem;
     }
 
-    #contact p, #contact address {
+    #contact p,
+    #contact address {
         font-size: 1rem;
     }
 }
@@ -409,7 +569,8 @@ nav ul li a:hover {
 /* About Section Styling */
 #about {
     background-color: #34495E;
-    padding: 40px 20px; /* Reduced padding to make it more compact */
+    padding: 40px 20px;
+    /* Reduced padding to make it more compact */
     color: #fff;
     text-align: center;
 }
@@ -430,11 +591,13 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#about p, #about .mission-text {
+#about p,
+#about .mission-text {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    text-align: justify; /* Justified text alignment */
+    text-align: justify;
+    /* Justified text alignment */
 }
 
 #about h3 {
@@ -444,10 +607,69 @@ nav ul li a:hover {
 }
 
 #about .values-list {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
     gap: 30px;
     margin-top: 20px;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    #about .values-list {
+        grid-template-columns: 1fr;
+        /* Single column on tablets */
+        gap: 20px;
+    }
+
+    .about-container {
+        padding: 30px 20px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about h3 {
+        font-size: 1.6rem;
+    }
+
+    #about p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 20px 10px;
+    }
+
+    .about-container {
+        padding: 20px 15px;
+    }
+
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about h3 {
+        font-size: 1.4rem;
+    }
+
+    #about p,
+    #about .mission-text {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .value-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .value-item p {
+        font-size: 1rem;
+    }
 }
 
 .value-item {
@@ -498,7 +720,8 @@ nav ul li a:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #2C3E50; /* Dark color to match the overall theme */
+    background-color: #2C3E50;
+    /* Dark color to match the overall theme */
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -506,7 +729,8 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 1.1rem;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on top */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow on top */
 }
 
 footer p {
@@ -522,7 +746,8 @@ footer a {
 }
 
 footer a:hover {
-    color: #fff; /* Change color on hover */
+    color: #fff;
+    /* Change color on hover */
 }
 
 /* Add some responsiveness for smaller screens */
@@ -530,8 +755,9 @@ footer a:hover {
     footer {
         padding: 20px 0;
     }
+
     footer p {
-        font-size: 1rem; /* Slightly smaller text on mobile */
+        font-size: 1rem;
+        /* Slightly smaller text on mobile */
     }
 }
-
