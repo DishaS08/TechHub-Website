@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tech Hub | Online Learning</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="TechHub - Your one-stop tech destination.">
-    <meta name="keywords" content="Tech, Hub, HTML, CSS, JavaScript">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <a href="#" id="reload-logo"><h1>Tech Hub</h1></a>
+            <a href="#" id="reload-logo">
+                <h1>Tech Hub</h1>
+            </a>
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#faculty">Faculty</a></li>
@@ -27,202 +33,219 @@
             </ul>
         </nav>
     </header>
-    
-    
-
-<section id="home">
-    <div class="home-container">
-        <h2>Welcome to Tech Hub</h2>
-        <p class="intro-text">Your Path to Mastering In-Demand Tech Skills</p>
-        <p>Tech Hub is your one-stop platform for learning cutting-edge technologies and building a successful career in tech. Whether you’re starting fresh or looking to upskill, our hands-on courses, taught by industry experts, provide practical knowledge to help you succeed.</p>
-        <p>Our platform offers a variety of courses in Web Development, Data Science, AI, Cybersecurity, and more. We focus on real-world projects, ensuring that you gain the skills needed to excel in today’s job market.</p>
-        <p>Join thousands of learners from around the world and take the next step in your tech career with Tech Hub!</p>
-        <div class="cta">
-            <a href="#courses" class="cta-button">Explore Courses</a>
-        </div>
-    </div>
-</section>
 
 
 
- <section id="courses">
-    <div class="course-container">
-        <h2>Our Courses</h2>
-        <div class="course-list">
-            <div class="course-item">
-                <h3>Web Development</h3>
-                <p>Learn to build modern, responsive websites using HTML, CSS, JavaScript, and frameworks like React.</p>
-                <div class="overview">
-                    <p>Overview: Get hands-on experience with full-stack web development.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Data Analytics (DA)</h3>
-                <p>Learn to analyze and interpret complex data using statistical tools, visualizations, and machine learning algorithms.</p>
-                <div class="overview">
-                    <p>Overview: Focus on data preprocessing, analysis, and deriving insights from data.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Data Science</h3>
-                <p>Understand data analysis, visualization, machine learning, and AI concepts using Python and R.</p>
-                <div class="overview">
-                    <p>Overview: Learn how to work with real-world datasets and build predictive models.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Cloud Computing</h3>
-                <p>Master cloud platforms like AWS, Azure, and Google Cloud to deploy scalable applications.</p>
-                <div class="overview">
-                    <p>Overview: Gain expertise in cloud infrastructure and deployment strategies.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Cybersecurity</h3>
-                <p>Learn ethical hacking, network security, penetration testing, and cryptography techniques.</p>
-                <div class="overview">
-                    <p>Overview: Focus on securing networks and ethical hacking techniques.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Artificial Intelligence</h3>
-                <p>Develop AI applications using deep learning, neural networks, and NLP models.</p>
-                <div class="overview">
-                    <p>Overview: Work on machine learning algorithms and AI-driven applications.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Android Development</h3>
-                <p>Build Android apps using Java, Kotlin, and Android Studio with real-world projects.</p>
-                <div class="overview">
-                    <p>Overview: Learn to create native Android applications with Java and Kotlin.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Blockchain Technology</h3>
-                <p>Understand decentralized applications, smart contracts, and cryptocurrency development.</p>
-                <div class="overview">
-                    <p>Overview: Learn blockchain concepts and how to build decentralized apps.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>DevOps</h3>
-                <p>Automate deployments and CI/CD pipelines using Docker, Kubernetes, and Jenkins.</p>
-                <div class="overview">
-                    <p>Overview: Master automation, orchestration, and CI/CD pipeline building.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Software Testing</h3>
-                <p>Learn manual and automation testing, including Selenium, JUnit, and API testing.</p>
-                <div class="overview">
-                    <p>Overview: Explore various testing techniques, including automation and API testing.</p>
-                </div>
-            </div>
-            <div class="course-item">
-                <h3>Game Development</h3>
-                <p>Learn the fundamentals of game design and development using Unity and C#.</p>
-                <div class="overview">
-                    <p>Overview: Create engaging and interactive games with Unity.</p>
-                </div>
+    <section id="home">
+        <div class="home-container">
+            <h2>Welcome to Tech Hub</h2>
+            <p class="intro-text">Your Path to Mastering In-Demand Tech Skills</p>
+            <p>Tech Hub is your one-stop platform for learning cutting-edge technologies and building a successful
+                career in tech. Whether you’re starting fresh or looking to upskill, our hands-on courses, taught by
+                industry experts, provide practical knowledge to help you succeed.</p>
+            <p>Our platform offers a variety of courses in Web Development, Data Science, AI, Cybersecurity, and more.
+                We focus on real-world projects, ensuring that you gain the skills needed to excel in today’s job
+                market.</p>
+            <p>Join thousands of learners from around the world and take the next step in your tech career with Tech
+                Hub!</p>
+            <div class="cta">
+                <a href="#courses" class="cta-button">Explore Courses</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- Faculty Section -->
-<section id="faculty">
-    <h2>Our Faculty</h2>
-    <div class="faculty-list">
-        <div class="faculty-item">
-            <h3>Dr. Rajesh Kulkarni</h3>
-            <p>PhD in Computer Science. 12+ years of experience in Web Development.</p>
-        </div>
-        <div class="faculty-item">
-            <h3>Prof. Ananya Sharma</h3>
-            <p>MTech in Data Science. Worked as a Data Scientist at Google.</p>
-        </div>
-        <div class="faculty-item">
-            <h3>Dr. Sneha Menon</h3>
-            <p>PhD in Cybersecurity. Specializes in ethical hacking and network security.</p>
-        </div>
-        <div class="faculty-item">
-            <h3>Prof. Ravi Desai</h3>
-            <p>Expert in Cloud Computing. Over 15 years of experience in the industry.</p>
-        </div>
-        <div class="faculty-item">
-            <h3>Dr. Neha Joshi</h3>
-            <p>MSc in Artificial Intelligence. Passionate about deep learning and neural networks.</p>
-        </div>
-    </div>
-</section>
 
-
-<!-- Contact Section -->
-<section id="contact">
-    <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p>For inquiries, please reach out to us at:</p>
-        <address>
-            <strong>Email:</strong> <a href="mailto:info@techhub.com">info@techhub.com</a><br>
-            <strong>Phone:</strong> +91 98765 43210<br>
-            <strong>Office:</strong> 123 Tech Hub Lane, Mumbai, Maharashtra 400001, India<br>
-            <strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM (IST)
-        </address>
-        <h3>Follow Us</h3>
-        <div class="social-media">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">LinkedIn</a>
-        </div>
-    </div>
-</section>
-
-
-<!-- About Section -->
-<section id="about">
-    <div class="about-container">
-        <h2>About Us</h2>
-        <p>Welcome to Tech Hub! We're a dynamic platform offering world-class tech education to students and professionals. Our goal is to empower learners with practical skills, industry certifications, and mentorship from experts in the field.</p>
-        
-        <h3>Our Mission</h3>
-        <p>At Tech Hub, we bridge the gap between education and industry by providing cutting-edge courses, delivered by seasoned professionals. Our mission is to make tech education accessible, affordable, and practical for everyone, everywhere.</p>
-        
-        <h3>Our Values</h3>
-        <div class="values-list">
-            <div class="value-item">
-                <h4>Innovation</h4>
-                <p>We embrace the latest trends and technologies, ensuring our curriculum remains at the forefront of the tech industry.</p>
+    <section id="courses">
+        <div class="course-container">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3>Web Development</h3>
+                    <p>Learn to build modern, responsive websites using HTML, CSS, JavaScript, and frameworks like
+                        React.</p>
+                    <div class="overview">
+                        <p>Overview: Get hands-on experience with full-stack web development.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Data Analytics (DA)</h3>
+                    <p>Learn to analyze and interpret complex data using statistical tools, visualizations, and machine
+                        learning algorithms.</p>
+                    <div class="overview">
+                        <p>Overview: Focus on data preprocessing, analysis, and deriving insights from data.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Data Science</h3>
+                    <p>Understand data analysis, visualization, machine learning, and AI concepts using Python and R.
+                    </p>
+                    <div class="overview">
+                        <p>Overview: Learn how to work with real-world datasets and build predictive models.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Cloud Computing</h3>
+                    <p>Master cloud platforms like AWS, Azure, and Google Cloud to deploy scalable applications.</p>
+                    <div class="overview">
+                        <p>Overview: Gain expertise in cloud infrastructure and deployment strategies.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Cybersecurity</h3>
+                    <p>Learn ethical hacking, network security, penetration testing, and cryptography techniques.</p>
+                    <div class="overview">
+                        <p>Overview: Focus on securing networks and ethical hacking techniques.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Develop AI applications using deep learning, neural networks, and NLP models.</p>
+                    <div class="overview">
+                        <p>Overview: Work on machine learning algorithms and AI-driven applications.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Android Development</h3>
+                    <p>Build Android apps using Java, Kotlin, and Android Studio with real-world projects.</p>
+                    <div class="overview">
+                        <p>Overview: Learn to create native Android applications with Java and Kotlin.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Blockchain Technology</h3>
+                    <p>Understand decentralized applications, smart contracts, and cryptocurrency development.</p>
+                    <div class="overview">
+                        <p>Overview: Learn blockchain concepts and how to build decentralized apps.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>DevOps</h3>
+                    <p>Automate deployments and CI/CD pipelines using Docker, Kubernetes, and Jenkins.</p>
+                    <div class="overview">
+                        <p>Overview: Master automation, orchestration, and CI/CD pipeline building.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Software Testing</h3>
+                    <p>Learn manual and automation testing, including Selenium, JUnit, and API testing.</p>
+                    <div class="overview">
+                        <p>Overview: Explore various testing techniques, including automation and API testing.</p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <h3>Game Development</h3>
+                    <p>Learn the fundamentals of game design and development using Unity and C#.</p>
+                    <div class="overview">
+                        <p>Overview: Create engaging and interactive games with Unity.</p>
+                    </div>
+                </div>
             </div>
-            <div class="value-item">
-                <h4>Quality Education</h4>
-                <p>Our top-tier education prepares learners with the knowledge and hands-on experience to excel in the tech world.</p>
+        </div>
+    </section>
+
+
+    <!-- Faculty Section -->
+    <section id="faculty">
+        <h2>Our Faculty</h2>
+        <div class="faculty-list">
+            <div class="faculty-item">
+                <h3>Dr. Rajesh Kulkarni</h3>
+                <p>PhD in Computer Science. 12+ years of experience in Web Development.</p>
             </div>
-            <div class="value-item">
-                <h4>Student-Centric</h4>
-                <p>We offer courses for all levels, focusing on real-world applications that cater to beginners as well as experts.</p>
+            <div class="faculty-item">
+                <h3>Prof. Ananya Sharma</h3>
+                <p>MTech in Data Science. Worked as a Data Scientist at Google.</p>
             </div>
-            <div class="value-item">
-                <h4>Supportive Community</h4>
-                <p>Join a thriving community with 24/7 access to mentors, peers, and valuable resources.</p>
+            <div class="faculty-item">
+                <h3>Dr. Sneha Menon</h3>
+                <p>PhD in Cybersecurity. Specializes in ethical hacking and network security.</p>
+            </div>
+            <div class="faculty-item">
+                <h3>Prof. Ravi Desai</h3>
+                <p>Expert in Cloud Computing. Over 15 years of experience in the industry.</p>
+            </div>
+            <div class="faculty-item">
+                <h3>Dr. Neha Joshi</h3>
+                <p>MSc in Artificial Intelligence. Passionate about deep learning and neural networks.</p>
             </div>
         </div>
+    </section>
 
-        <h3>Our Journey</h3>
-        <p>Founded in 2020, Tech Hub began with a mission to make high-quality tech education accessible to all. Today, we’re a leading platform for tech enthusiasts, offering courses ranging from web development to machine learning.</p>
 
-        <h3>Accreditations & Partnerships</h3>
-        <p>We are partnered with globally recognized institutions, earning certifications from:</p>
-        <ul>
-            <li>Google</li>
-            <li>Microsoft</li>
-            <li>Coursera</li>
-            <li>Udacity</li>
-        </ul>
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>For inquiries, please reach out to us at:</p>
+            <address>
+                <strong>Email:</strong> <a href="mailto:info@techhub.com">info@techhub.com</a><br>
+                <strong>Phone:</strong> +91 98765 43210<br>
+                <strong>Office:</strong> 123 Tech Hub Lane, Mumbai, Maharashtra 400001, India<br>
+                <strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM (IST)
+            </address>
+            <h3>Follow Us</h3>
+            <div class="social-media">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>Welcome to Tech Hub! We're a dynamic platform offering world-class tech education to students and
+                professionals. Our goal is to empower learners with practical skills, industry certifications, and
+                mentorship from experts in the field.</p>
+
+            <h3>Our Mission</h3>
+            <p>At Tech Hub, we bridge the gap between education and industry by providing cutting-edge courses,
+                delivered by seasoned professionals. Our mission is to make tech education accessible, affordable, and
+                practical for everyone, everywhere.</p>
+
+            <h3>Our Values</h3>
+            <div class="values-list">
+                <div class="value-item">
+                    <h4>Innovation</h4>
+                    <p>We embrace the latest trends and technologies, ensuring our curriculum remains at the forefront
+                        of the tech industry.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Quality Education</h4>
+                    <p>Our top-tier education prepares learners with the knowledge and hands-on experience to excel in
+                        the tech world.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Student-Centric</h4>
+                    <p>We offer courses for all levels, focusing on real-world applications that cater to beginners as
+                        well as experts.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Supportive Community</h4>
+                    <p>Join a thriving community with 24/7 access to mentors, peers, and valuable resources.</p>
+                </div>
+            </div>
+
+            <h3>Our Journey</h3>
+            <p>Founded in 2020, Tech Hub began with a mission to make high-quality tech education accessible to all.
+                Today, we’re a leading platform for tech enthusiasts, offering courses ranging from web development to
+                machine learning.</p>
+
+            <h3>Accreditations & Partnerships</h3>
+            <p>We are partnered with globally recognized institutions, earning certifications from:</p>
+            <ul>
+                <li>Google</li>
+                <li>Microsoft</li>
+                <li>Coursera</li>
+                <li>Udacity</li>
+            </ul>
+        </div>
+    </section>
 
 
 
@@ -232,4 +255,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
